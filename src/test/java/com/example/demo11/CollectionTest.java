@@ -26,7 +26,8 @@ public class CollectionTest {
 		// ArrayList 是用來實現定義在 List 中方法的實作類別
 		List<Bank> list = new ArrayList<>();
 		// List <>(角括號)中的資料型態不能放8種基本資料型態,只能放類別(Class)
-		List<Integer> intlist = new ArrayList<>();// List 特色 : 1. 允許元素重複 2. 內部資料保持一定順序(以插入(新增))的順序)
+		// List 特色 : 1. 允許元素重複 2. 內部資料保持一定順序(以插入(新增))的順序)
+		List<Integer> intlist = new ArrayList<>();
 		intlist.add(1);
 		intlist.add(1);
 		intlist.add(2);
@@ -229,6 +230,8 @@ public class CollectionTest {
 		map.put(0, "E");
 		// containsKey 是否有此 key 值
 		System.out.println(map.containsKey(1));
+		// containsValue 是否是這個 Value 值
+		System.out.println(map.containsValue("E"));
 
 		System.out.println("=============================");
 		for (Entry<Integer, String> item : map.entrySet()) {

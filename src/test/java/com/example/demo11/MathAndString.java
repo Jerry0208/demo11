@@ -7,7 +7,7 @@ import org.springframework.util.StringUtils;
 
 //Math and String
 public class MathAndString {
-//	@Test
+	@Test
 	public void mathTest() {
 		int x1 = Math.max(5, 3);// Math.max(比較值1,比較值2),找最大值
 		System.out.println(x1);

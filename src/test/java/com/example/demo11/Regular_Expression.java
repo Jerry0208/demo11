@@ -1,5 +1,8 @@
 package com.example.demo11;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Scanner;
 
 import org.junit.jupiter.api.Test;
@@ -162,6 +165,46 @@ public class Regular_Expression {
 //		}else {
 //			System.out.println("輸入錯誤");
 //		}
+
+	}
+
+	@Test
+	public void text3() {
+		String str = "ABSIjwcnwodsenfpqa你 好_@*";
+
+		System.out.printf(this.countCharacter(str));
+
+	}
+
+
+	// 計算一串文字中所有字母的出現次數
+	public String countCharacter(String str) {
+		// 先講所以英文轉為大寫英文字母
+		str = str.toUpperCase();
+		// 將字串中所有文字分割成單一字母放入 List 陣列內
+		String[] listStr = str.split("");
+		// 建立LinkedHaskMap
+		Map<String, Integer> map = new LinkedHashMap<>();
+
+		// 透過迴圈逐一比對，如果 Map 已經有這一字母，則 Value + 1
+		// 沒有則新增至 Map，Value 為 1
+		for (int i = 0; i <= listStr.length - 1; i++) {
+			if (map.containsKey(listStr[i])) {
+				map.put(listStr[i], map.get(listStr[i]) + 1);
+			} else {
+				map.put(listStr[i], 1);
+			}
+		}
+
+		// 建立一個空字串
+		String reqStr = "";
+		// 透過 Entry 將文字 : 數量 儲存在 reqStr 內
+		for (Entry<String, Integer> item : map.entrySet()) {
+			reqStr += item.getKey() + ":" + item.getValue() + ", ";
+		}
+		
+		// 回傳resStr
+		return reqStr;
 
 	}
 }
