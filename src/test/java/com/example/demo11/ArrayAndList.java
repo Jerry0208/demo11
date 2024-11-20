@@ -32,7 +32,8 @@ public class ArrayAndList {
 	}
 
 	public void classQuiz(int[] score) {
-		// System.out.println(score.toString());
+		// 對8種基本資料型態+ String 以外的物件直接使用 .toString 會印出記憶體位置
+//		System.out.println(score.toString());
 		System.out.println("所得評審分數：" + Arrays.toString(score));
 		Arrays.sort(score);// 由小到大排序
 		double average = 0;
@@ -43,7 +44,7 @@ public class ArrayAndList {
 		System.out.println("有效分數：" + average);
 	}
 
-//	@Test
+	@Test
 	public void list() {
 		List<Integer> a = Arrays.asList(0, 1, 2);// 建立清單: List<資料型態> 名稱 = Array.asList(資料1, 資料2,......) ★長度固定，無法增刪
 		List<Double> b = List.of(3.0, 4.0);// 建立清單: List<資料型態> 名稱 = List.of(資料1, 資料2,......) ★長度固定，無法增刪
@@ -53,15 +54,19 @@ public class ArrayAndList {
 //		c.add(8); //.add() : 增加儲存一個資料
 //		c.remove(1);//.remove() : 減少一個儲存資料，括號內數字為index位置
 //		System.out.println(d.get(0));// .get() : 取得清單該位置的資料內容
-//		System.out.println(d.indexOf(4));// .indexOf() : 取得值所在的索引位置
+//		System.out.println(d.indexOf(4.0));// .indexOf() : 取得值所在的索引位置 ， 回傳 -1 則為 List 中沒有該內容
 //		System.out.println(d.contains(5));// .contains() : booleam,是否包含
 //		System.out.println(c);//直接列出列表內所有元素
+		
+		// 3種 for 迴圈方法
 //		for(int i : c) { //遍歷
 //			System.out.println(i);
 //		}
-//		d.forEach(item -> {// List名稱.forEach( 名稱 箭頭 { 程式內容 缺點:沒辦法放區域變數 } );
+		
+//		d.forEach(item -> {            // List名稱.forEach( 名稱 箭頭 { 程式內容 缺點:沒辦法放區域變數 } );
 //			System.out.println(item);
 //		});
+		
 //		for (int i = 0; i <= 3; i++) {
 //			c.add(i);
 //			System.out.println("第" + i + "次 : " + c);
@@ -81,8 +86,12 @@ public class ArrayAndList {
 		}
 		// 把List內的元素以String取出
 		String list = "";
-		for (int i = 0; i < randomNum.size(); i++) {
-			list += randomNum.get(i) + "";
+//		for (int i = 0; i < randomNum.size(); i++) {
+//			list += randomNum.get(i) + "";
+//		}
+		
+		for(int item : randomNum) {
+			list += item;
 		}
 		;
 		System.out.println(list);// 列印出List內容

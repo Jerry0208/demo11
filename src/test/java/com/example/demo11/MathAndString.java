@@ -111,8 +111,8 @@ public class MathAndString {
 
 	@Test
 	void test() {
-//		this.Stringquiz1("DDDCCCAAABBB");
-		this.Stringquiz2("DDDCCCAAABBB");
+		this.Stringquiz1("DDDCCCAAABBB");
+//		this.Stringquiz2("DDDCCCAAABBB");
 	}
 
 	void Stringquiz1(String quiz) {
@@ -120,18 +120,34 @@ public class MathAndString {
 		prepare = quiz.toCharArray();// 把String內每個字母分割成char後放入陣列內
 		int countS[] = new int[4];// 製作一個陣列存放
 		for (char check : prepare) {
-			if (check == 'A') {
+//			if (check == 'A') {
+//				countS[0]++;
+//			}
+//			if (check == 'B') {
+//				countS[1]++;
+//			}
+//			if (check == 'C') {
+//				countS[2]++;
+//			}
+//			if (check == 'D') {
+//				countS[3]++;
+//			}
+
+			switch (check) {
+			case 'A':
 				countS[0]++;
-			}
-			if (check == 'B') {
+				break;
+			case 'B':
 				countS[1]++;
-			}
-			if (check == 'C') {
+				break;
+			case 'C':
 				countS[2]++;
-			}
-			if (check == 'D') {
+				break;
+			case 'D':
 				countS[3]++;
+				break;
 			}
+
 		}
 		System.out.printf("有 %d個A %d個B %d個C %d個D", countS[0], countS[1], countS[2], countS[3]);
 	}

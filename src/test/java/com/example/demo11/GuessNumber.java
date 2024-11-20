@@ -5,12 +5,12 @@ import java.util.Scanner;
 
 public class GuessNumber {
 	@Test
-	public void guessnumber() {
+	public void guessNumber() {
 		Scanner scanner = new Scanner(System.in);
 		int min = 1, max = 99; // 初始並設定最小值跟最大值
 		int taket;
-		taket = (int) (Math.random() * (max-1)) + (min-1); // 產生1~99亂數, Math.random()＊(區間大小) + 下限值 ：也就是從下限值往上共有幾個數
-
+		taket = (int) (Math.random() * (max)) + (min); // 產生1~99亂數, Math.random()＊(區間大小) + 下限值 ：也就是從下限值往上共有幾個數
+		
 		System.out.print("猜一個" + min + "~" + max + "的整數 : ");
 		loop_1: while (true) {
 			int gus = scanner.nextInt(); // 輸入一個數

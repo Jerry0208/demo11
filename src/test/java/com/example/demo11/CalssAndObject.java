@@ -1,5 +1,7 @@
 package com.example.demo11;
 
+import java.util.Scanner;
+
 import org.junit.jupiter.api.Test;
 
 public class CalssAndObject {
@@ -50,4 +52,6 @@ public class CalssAndObject {
 		System.out.println("æl√B : " + bank1.getBalance());
 
 	}
+
+	
 }
