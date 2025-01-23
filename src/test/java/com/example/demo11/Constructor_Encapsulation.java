@@ -27,7 +27,7 @@ public class Constructor_Encapsulation {
 	//*注意* 如果有建立小括號帶有參數的建溝方法,預設的建溝方式沒寫就不能夠使用
 	//好習慣 : 如果建立帶有參數的建溝方法時,同時建立不帶參數的建構方法(接資料庫時沒有預設建溝方法時會出錯)
 	
-	//類別成員的存取控制    Class  package   subClass(繼承)	  world
+	//類別成員的存取控制    Class  package   subClass(繼承) world
 	//	public			o		o		  o		 	  	o
 	//	protected		o		o		  o
 	//	no modifier		o		o
